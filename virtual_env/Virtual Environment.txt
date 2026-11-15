@@ -1,3 +1,30 @@
+Project A is a legacy/older application that was developed using
+requests version 2.28.2.
+
+Deactivate any virtual environments you have.
+
+First, install Project A's dependencies globally:
+pip install -r project_a/requirements.txt
+
+Run Project A:
+python project_a/main.py
+
+Now install Project B's dependencies:
+pip install -r project_b/requirements.txt
+
+This upgrades the globally installed requests package.
+
+Run Project B:
+python project_b/main.py
+
+But now run Project A again:
+python project_a/main.py
+
+The problem
+TypeError: Client.__init__() got an
+unexpected keyword argument 'proxies'
+
+
 # Python Virtual Environments with Windows PowerShell and Jupyter
 
 ===============================================================================
