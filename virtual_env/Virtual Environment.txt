@@ -1,28 +1,53 @@
-Project A is a legacy/older application that was developed using
-requests version 2.28.2.
+# Dependency Conflict
+
+Project A is a legacy/older application that was developed using `numpy` version `1.26.4`.
+
+Make sure you are inside the `virtual_env` directory.
 
 Deactivate any virtual environments you have.
 
 First, install Project A's dependencies globally:
+
+```bash
 pip install -r project_a/requirements.txt
+```
+
+Notice the dependency conflicts that emerge in the terminal.
 
 Run Project A:
+
+```bash
 python project_a/main.py
+```
 
 Now install Project B's dependencies:
-pip install -r project_b/requirements.txt
 
-This upgrades the globally installed requests package.
+```bash
+pip install -r project_b/requirements.txt
+```
+
+Project B uses pandas 3.1.0, which requires NumPy 2.0.2 or newer.
+
+Because Project B requires a newer version of NumPy, the globally installed NumPy 1.26.4 was replaced with a newer version.
 
 Run Project B:
+
+```bash
 python project_b/main.py
+```
 
 But now run Project A again:
-python project_a/main.py
 
-The problem
-TypeError: Client.__init__() got an
-unexpected keyword argument 'proxies'
+```bash
+python project_a/main.py
+```
+
+## The Problem
+
+```text
+AttributeError: `np.float_` was removed in the NumPy 2.0 release.
+Use `np.float64` instead.
+```
 
 
 # Python Virtual Environments with Windows PowerShell and Jupyter
@@ -39,7 +64,7 @@ beginning of the command prompt:
 PS C:\Users\gurban-dev\python>
 
 
-Navigate to the directory where all of your programs are located.
+Navigate to the directory of the Python project for which you want to create a virtual environment.
 
 
 Create a virtual environment folder in that same directory:
@@ -70,8 +95,7 @@ Once activated, you should see (.venv) at the beginning of the command prompt:
 3. IF POWERSHELL PREVENTS THE ACTIVATION
 -------------------------------------------------------------------------------
 
-If PowerShell prevents the activation script from running, open PowerShell
-and run it as an administrator:
+If PowerShell prevents the activation script from running, open PowerShell and run the following command:
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
@@ -130,13 +154,16 @@ Select:
 
 
 -------------------------------------------------------------------------------
-8. VERIFY THE PYTHON VERSION IN JUPYTER
+8. VERIFY THE PYTHON INTERPRETER IN JUPYTER
 -------------------------------------------------------------------------------
 
 The following line can be added to a cell in Jupyter Notebook to make sure
 that the correct version of Python is being used:
 
-!python --version
+import sys
+
+print(sys.executable)
+print(sys.version)
 
 
 This allows you to verify which Python interpreter is being used by the

@@ -1,10 +1,7 @@
-import httpx
+import numpy as np
 
-print("Project A: My Website Checker")
+print("Project A: My Calculator")
 
-response = httpx.get(
-    "https://example.com",
-    proxies="http://localhost:8080"
-)
+number = np.float_(3.14)
 
-print(response.status_code)
+print(f"My number is: {number}")

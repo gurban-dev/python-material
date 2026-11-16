@@ -1,7 +1,7 @@
-import httpx
+import numpy as np
 
-print("Project B: My Website Checker")
+print("Project B: My Calculator")
 
-response = httpx.get("https://example.com")
+numbers = np.array([10, 20, 30, 40])
 
-print(response.status_code)
+print(f"Average: {np.mean(numbers)}")
