@@ -2,6 +2,10 @@
 # insert variables or expressions directly into a string using
 # {} (curly braces).
 
+# This is an example of string interpolation, which means
+# inserting variable values or expressions into a string.
+# F-strings are Python's preferred way of doing this.
+
 name = "Herodotus"
 century = 5
 

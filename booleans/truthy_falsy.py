@@ -107,3 +107,13 @@ if refresh_token:
   print('refresh_token evaluated to True.')
 else:
   print('refresh_token evaluated to False.')
+
+# Python's or operator evaluates expressions from left to right:
+# "False" is a non-empty string, so it is truthy.
+# "" is an empty string, so it is falsy.
+
+# Because the first operand is truthy, Python returns it without
+# evaluating the second operand.
+result = "False" or ""
+
+print("\nresult:", result)
