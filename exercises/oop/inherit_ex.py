@@ -29,7 +29,7 @@ Has a method called meow() that prints "The cat meows".
 
 
 Then:
-Create a Cat object
+Create a Cat object.
 
-Call both speak() and meow()
+Call both speak() and meow().
 '''

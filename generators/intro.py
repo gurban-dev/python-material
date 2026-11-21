@@ -16,7 +16,7 @@ print('\ny:', y)
 print('\nnext(y):', next(y))
 print('next(y):', next(y))
 
-# __next__ is a dunder method.
+# .__next__() is a dunder method.
 print('y.__next__():', y.__next__())
 
 print('\nFor loop begins')
