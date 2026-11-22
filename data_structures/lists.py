@@ -16,8 +16,19 @@ The items that are enclosed in brackets and separated
 by commas are the list elements. 2 is the first element
 for instance, its index is 0 (zero).'''
 
+# The square brackets [] make it clear that this is a
+# Python list.
+
+# A list a data structure that allows us to store multiple
+# values in a single variable.
+
+# 'even_numbers' is a variable because it's on the left side
+# of the assignment operator (=).
+
 # Indices:      0  1  2  3   4
 even_numbers = [2, 2, 6, 8, 10]
+
+print('even_numbers:', even_numbers)
 
 # Remember that a list can store duplicate values.
 
@@ -25,7 +36,7 @@ even_numbers = [2, 2, 6, 8, 10]
 info = ['Alicia', 27, 1550.87, True, []]
 
 # The print() function can be used display an entire list.
-print('info:', info)
+print('\ninfo:', info)
 
 # Index the first item.
 print('\ninfo[0]:', info[0])

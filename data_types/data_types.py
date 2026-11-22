@@ -6,9 +6,9 @@ is assigned 10 which exclusively has numerals, without a decimal
 point without being enclosed in quotation marks.'''
 int_var = 10
 
-# The data type is a float because 10.0 is exclusively composed of
-# numerals, contains a decimal point and is not enclosed in quotation
-# marks.
+# The data type is a float because 10.0 is exclusively composed
+# of numeric digits, contains a decimal point and is not enclosed
+# in quotation marks.
 float_var = 10.0
 
 # Utilise the built-in type() function to output
