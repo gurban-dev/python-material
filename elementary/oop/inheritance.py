@@ -36,6 +36,10 @@ class Animal(object):
 # has.
 class Dog(Animal):
     def __init__(self, species, neutered):
+        # super() is a built-in function that references the parent
+        # class and allows the child class to access methods that
+        # are defined in the parent class.
+
         # Invoke the constructor method that was defined in the
         # parent class, Animal and pass the parameter species to
         # it.
@@ -47,16 +51,16 @@ class Dog(Animal):
         print("Woof!\n")
 
 # Object of the Animal class.
-animal = Animal(species="Anteater")
+# animal = Animal(species="Anteater")
 
-animal.eat()
+# animal.eat()
 
 # Invalid because the Animal class does not inherit from the
 # Dog class.
 # animal.bark()
 
 # Instance of the Dog class.
-dog = Dog("Caucasian Shepherd", neutered=True)
+dog = Dog("Domestic Dog", neutered=True)
 
 dog.eat()
 
